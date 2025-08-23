@@ -1,4 +1,4 @@
-CREATE TABLE whatchlist (
+CREATE TABLE watchlist (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
     genero VARCHAR(100) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE whatchlist (
     duracaoEmMin INT NOT NULL
 );
 
-INSERT INTO whatchlist (titulo, genero, diretor, ano, sinopse, duracaoEmMin)
+INSERT INTO watchlist (titulo, genero, diretor, ano, sinopse, duracaoEmMin)
 VALUES
     ('Superman', 'Ação', 'James Gunn', 2025, 'Superman, um jornalista de Metrópolis, embarca em uma jornada para reconciliar sua herança kryptoniana com sua criação humana como Clark Kent.', 129),
     ('Pecadores', 'Ação', 'Ryan Coogler', 2025, 'Tentando deixar suas vidas problemáticas para trás, os irmãos gêmeos retornam à sua cidade natal para recomeçar, apenas para descobrir que um mal ainda maior está esperando para recebê-los de volta.', 137),
@@ -17,13 +17,13 @@ VALUES
     ('Anatomia de uma Queda', 'Thriller', 'Justine Triet', 2023, 'Uma mulher é suspeita do assassinato do marido, e seu filho cego enfrenta um dilema moral como única testemunha.', 150);
 
 // Inserindo filme
-INSERT INTO whatchlist (titulo, genero, diretor, ano, sinopse, duracaoEmMin)
+INSERT INTO watchlist (titulo, genero, diretor, ano, sinopse, duracaoEmMin)
 VALUES ('Nosferatu', 'Horror', 'F.W. Murnau', 1922, 'O misterioso Conde Orlok convoca Thomas Hutter ao seu remoto castelo nas montanhas da Transilvânia. O sinistro Orlok busca comprar uma casa perto de Hutter e de sua esposa, Ellen. Após Orlok revelar sua natureza vampírica, Hutter luta para escapar do castelo, sabendo que Ellen está em grave perigo. Enquanto isso, o servo de Orlok, Knock, prepara a chegada de seu mestre ao seu novo lar.', 94);
 
 // Listar Todos os Filmes
 SELECT *
-FROM whatchlist;
+FROM watchlist;
 
 // Deletar Filme
-DELETE FROM whatchlist
+DELETE FROM watchlist
 WHERE titulo = 'Nosferatu';
