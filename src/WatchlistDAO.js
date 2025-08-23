@@ -3,7 +3,7 @@ import pool from "./db.js";
 export class WatchlistDAO {
   static async inserir(filme) {
     try {
-      const sql = `INSERT INTO watchlist (titulo, genero, diretor, ano, sinopse, duracaoemmin) VALUES ($1, $2, $3, $4, $5, $6)`;
+      const sql = `INSERT INTO watchlist (titulo, genero, diretor, ano, sinopse, duracaoemmin) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`;
 
       const values = [
         filme.titulo,
@@ -35,7 +35,7 @@ export class WatchlistDAO {
 
   static async deletar(id) {
     try {
-      const sql = "DELETE FROM watchlist WHERE id = $1";
+      const sql = "DELETE FROM watchlist WHERE id = $1 RETURNING *";
       const values = [id];
       const resultado = await pool.query(sql, values);
       return resultado.rows[0];
