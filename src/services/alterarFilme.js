@@ -29,8 +29,8 @@ export async function alterarFilme(rl) {
       duracaoemmin: novaDuracao,
     };
 
-    const resultado = await WatchlistDAO.atualizar(filmeAtualizado);
-    console.log("Filme atualizado com sucesso:", resultado);
+    await WatchlistDAO.atualizar(filmeAtualizado);
+    console.log(`Filme "${filmeAtualizado.titulo}" atualizado com sucesso.`);
   } catch (error) {
     console.error("Erro ao alterar filme:", error.message);
   }

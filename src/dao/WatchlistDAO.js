@@ -23,7 +23,7 @@ export class WatchlistDAO {
 
   static async listar() {
     try {
-      const sql = "SELECT * FROM watchlist";
+      const sql = `SELECT * FROM watchlist`;
       return (await pool.query(sql)).rows;
     } catch (error) {
       console.error("Erro ao listar filmes: ", error.message);
@@ -33,7 +33,7 @@ export class WatchlistDAO {
 
   static async deletar(id) {
     try {
-      const sql = "DELETE FROM watchlist WHERE id = $1 RETURNING *";
+      const sql = `DELETE FROM watchlist WHERE id = $1 RETURNING *`;
       const values = [id];
       return (await pool.query(sql, values)).rows[0];
     } catch (error) {
@@ -44,7 +44,7 @@ export class WatchlistDAO {
 
   static async filtrarGenero(genero) {
     try {
-      const sql = "SELECT * FROM filmes WHERE genero = $1";
+      const sql = `SELECT * FROM watchlist WHERE genero = $1`;
       const resultado = await pool.query(sql, [genero]);
       return resultado.rows;
     } catch (error) {
@@ -55,7 +55,7 @@ export class WatchlistDAO {
  
   static async filtrarDuracao(min, max) {
     try {
-      const sql = "SELECT * FROM filmes WHERE duracao BETWEEN $1 AND $2";
+      const sql = `SELECT * FROM watchlist WHERE duracao BETWEEN $1 AND $2`;
       const resultado = await pool.query(sql, [min, max]);
       return resultado.rows;
     } catch (error) {
@@ -67,11 +67,11 @@ export class WatchlistDAO {
   static async atualizar(filme) {
     try {
       const sql = `
-        UPDATE filmes
-        SET titulo = $1, genero = $2, duracao = $3
-        WHERE id = $4
+        UPDATE watchlist
+        SET titulo = $1, genero = $2, diretor = $3, ano = $4, sinopse = $5, duracaoemmin = $6
+        WHERE id = $7
       `;
-      const valores = [filme.titulo, filme.genero, filme.duracao, filme.id];
+      const valores = [filme.titulo, filme.genero, filme.diretor, filme.ano, filme.sinopse, filme.duracaoemmin, filme.id];
       await pool.query(sql, valores);
     } catch (error) {
       console.error("Erro ao alterar filme: ", error.message);
