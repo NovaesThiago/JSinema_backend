@@ -44,4 +44,42 @@ export class WatchlistDAO {
       throw error;
     }
   }
+
+  static async filtrarGenero(genero) {
+    try {
+      const sql = "SELECT * FROM filmes WHERE genero = $1";
+      const resultado = await pool.query(sql, [genero]);
+      return resultado.rows;
+    } catch (error) {
+      console.error("Erro ao filtrar por gênero: ", error.message);
+      throw error;
+    }
+  }  
+ 
+  static async filtrarDuracao(min, max) {
+    try {
+      const sql = "SELECT * FROM filmes WHERE duracao BETWEEN $1 AND $2";
+      const resultado = await pool.query(sql, [min, max]);
+      return resultado.rows;
+    } catch (error) {
+      console.error("Erro ao filtrar por duração: ", error.message);
+      throw error;
+    }
+  }
+
+  static async alterarFilmes(filme) {
+    try {
+      const sql = `
+        UPDATE filmes
+        SET titulo = $1, genero = $2, duracao = $3
+        WHERE id = $4
+      `;
+      const valores = [filme.titulo, filme.genero, filme.duracao, filme.id];
+      await pool.query(sql, valores);
+    } catch (error) {
+      console.error("Erro ao alterar filme: ", error.message);
+      throw error;
+    }
+  }
 }
+
