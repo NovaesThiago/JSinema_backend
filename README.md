@@ -52,7 +52,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
   ```
   git clone https://github.com/seu-usuario/watchlist.git
   ```
-2. - Acesse a pasta do projeto:
+2. Acesse a pasta do projeto:
   ```
   cd watchlist
   ```
