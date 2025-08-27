@@ -1,4 +1,4 @@
-import { WatchlistDAO } from "./WatchlistDAO.js";
+import { WatchlistDAO } from "../dao/WatchlistDAO.js";
 import readline from "readline/promises";
 
 async function main() {
