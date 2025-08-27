@@ -1,6 +1,6 @@
-# 🎬 Sistema de Watchlist
+# 🎬 JSinema
 
-Bem-vindo ao **Sistema de Watchlist**, uma aplicação em Node.js para gerenciar sua lista de filmes favoritos diretamente pelo terminal. Com ela, você pode adicionar, listar, filtrar, editar e remover filmes com facilidade.
+Bem-vindo ao **JSinema**, uma aplicação em Node.js para gerenciar sua lista de filmes favoritos diretamente pelo terminal. Com ela, você pode adicionar, listar, filtrar, editar e remover filmes com facilidade.
 
 ---
 
@@ -50,11 +50,11 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 
 1. Clone o repositório:
   ```
-  git clone https://github.com/seu-usuario/watchlist.git
+  git clone https://github.com/NovaesThiago/JSinema_backend.git
   ```
 2. Acesse a pasta do projeto:
   ```
-  cd watchlist
+  cd JSinema_backend
   ```
 3. Instale as dependências:
   ```
@@ -72,3 +72,9 @@ Antes de rodar o projeto, certifique-se de ter instalado:
   ```
   node src/main.js
   ```
+---
+
+## ⏱️ Atualizações futuras
+
+O JSinema vai receber muito em breve sua versão com o Frontend totalmente funcional! fique atento às atualizações!
+---
