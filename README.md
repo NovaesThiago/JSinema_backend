@@ -63,15 +63,6 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 
 ---
 
-## ▶️ Como rodar o projeto
-  Execute o seguinte comando para iniciar o sistema:
-  ```
-  npm start
-  ```
-  Ou, se preferir, diretamente com Node:
-  ```
-  node src/main.js
-  ```
 # 📦 Configuração do Ambiente (.env)
 
 Antes de iniciar o projeto, é essencial configurar corretamente o arquivo `.env` com as informações do seu banco de dados. Isso garante que a aplicação consiga se conectar e funcionar como esperado.
@@ -93,6 +84,17 @@ DB_NAME=
   - DB_USER e DB_PASSWORD: são definidos na instalação. Se você não lembra, pode verificar no painel de administração (como phpMyAdmin ou pgAdmin) ou nos arquivos de configuração.
   - DB_NAME: é o nome do banco que você criou. Dá pra ver isso com um comando SQL como SHOW DATABASES; ou direto no painel.
 
+---
+
+## ▶️ Como rodar o projeto
+  Execute o seguinte comando para iniciar o sistema:
+  ```
+  npm start
+  ```
+  Ou, se preferir, diretamente com Node:
+  ```
+  node src/main.js
+  ```
 ---
 
 ## ⏱️ Atualizações futuras
