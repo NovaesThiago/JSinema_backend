@@ -1,10 +1,10 @@
-import { criarInterface } from "./utils/readlineInterface.js";
-import { inserirFilme } from "./services/inserirFilme.js";
-import { listarFilmes } from "./services/listarFilmes.js";
-import { deletarFilme } from "./services/deletarFilme.js";
-import { filtrarGenero } from "./services/filtrarGenero.js";
-import { filtrarDuracao } from "./services/filtrarDuracao.js";
-import { alterarFilme } from "./services/alterarFilme.js";
+import { criarInterface } from "./src/utils/readlineInterface.js";
+import { inserirFilme } from "./src/services/inserirFilme.js";
+import { listarFilmes } from "./src/services/listarFilme.js";
+import { deletarFilme } from "./src/services/deletarFilme.js";
+import { filtrarGenero } from "./src/services/filtrarGenero.js";
+import { filtrarDuracao } from "./src/services/filtrarDuracao.js";
+import { alterarFilme } from "./src/services/alterarFilme.js";
 
 async function main() {
   const rl = criarInterface();
