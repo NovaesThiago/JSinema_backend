@@ -14,8 +14,7 @@ export class WatchlistDAO {
         filme.duracaoemmin,
       ];
 
-      const resultado = await pool.query(sql, values);
-      return resultado.rows[0];
+      return (await pool.query(sql, values)).rows[0];
     } catch (error) {
       console.error("Erro ao inserir filme: ", error.message);
       throw error;
@@ -25,8 +24,7 @@ export class WatchlistDAO {
   static async listar() {
     try {
       const sql = "SELECT * FROM watchlist";
-      const resultado = await pool.query(sql);
-      return resultado.rows;
+      return (await pool.query(sql)).rows;
     } catch (error) {
       console.error("Erro ao listar filmes: ", error.message);
       throw error;
@@ -37,8 +35,7 @@ export class WatchlistDAO {
     try {
       const sql = "DELETE FROM watchlist WHERE id = $1 RETURNING *";
       const values = [id];
-      const resultado = await pool.query(sql, values);
-      return resultado.rows[0];
+      return (await pool.query(sql, values)).rows[0];
     } catch (error) {
       console.error("Erro ao deletar filme: ", error.message);
       throw error;
