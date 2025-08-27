@@ -12,7 +12,7 @@ export async function inserirFilme(rl) {
 
   try {
     const filmeInserido = await WatchlistDAO.inserir(novoFilme);
-    console.log("Filme inserido com sucesso:", filmeInserido);
+    console.log(`\nFilme "${filmeInserido.titulo}" inserido com sucesso!`);
   } catch (error) {
     console.error("Erro ao inserir filme:", error.message);
   }
