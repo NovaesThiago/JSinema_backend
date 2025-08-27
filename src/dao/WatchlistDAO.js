@@ -64,7 +64,7 @@ export class WatchlistDAO {
     }
   }
 
-  static async alterarFilmes(filme) {
+  static async atualizar(filme) {
     try {
       const sql = `
         UPDATE filmes
