@@ -39,9 +39,9 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 
 ## 👨‍💻 Autores
 
-**Thiago Novaes**  
-**Vinicius Alves** 
-📍 Picos, Piauí – Brasil
+- **Thiago Novaes**  📍 Picos, Piauí – Brasil
+- **Vinicius Alves** 📍 Picos, Piauí – Brasil
+
 
 
 ---
