@@ -72,9 +72,33 @@ Antes de rodar o projeto, certifique-se de ter instalado:
   ```
   node src/main.js
   ```
+# 📦 Configuração do Ambiente (.env)
+
+Antes de iniciar o projeto, é essencial configurar corretamente o arquivo `.env` com as informações do seu banco de dados. Isso garante que a aplicação consiga se conectar e funcionar como esperado.
+
+## 📝 Como preencher o `.env`
+
+Preencha os campos abaixo com os dados do seu banco de dados:
+
+```env
+DB_HOST=
+DB_PORT=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
+```
+  Exemplo:
+  - DB_HOST: geralmente é localhost ou 127.0.0.1
+  - DB_PORT: PostgreSQL: 5432
+  - DB_USER e DB_PASSWORD: são definidos na instalação. Se você não lembra, pode verificar no painel de administração (como phpMyAdmin ou pgAdmin) ou nos arquivos de configuração.
+  - DB_NAME: é o nome do banco que você criou. Dá pra ver isso com um comando SQL como SHOW DATABASES; ou direto no painel.
+
 ---
 
 ## ⏱️ Atualizações futuras
 
-O JSinema vai receber muito em breve sua versão com o Frontend totalmente funcional! fique atento às atualizações!
+- O JSinema vai receber muito em breve sua versão com o Frontend totalmente funcional!
+- Diversas novas funções novas como cadastro de Adm podendo atualizar o catalogo e muito mais!
+- Cadastro de Usuário podendo ter o seu perfil com sua WatchList e compartilhar a mesma!
+- fique atento às atualizações!
 ---
